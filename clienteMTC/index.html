@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>MTCM</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="card">
+        <div class="container text-right">
+            <div class="btn-group-horizontal" role="group" >
+                <div class="form-group btn-group btn-group-sm" role="group" >
+                    <input class="form-control"  id="txtEmail" type="email" placeholder="Email">
+                    <input class="form-control" id="txtPassword" type="password" placeholder="Password">
+                </div>
+                <div class="btn-group btn-group-sm form-check" role="group">
+                    <button id="btnLogin" class="form-control btn btn-action">
+                        Log in
+                    </button>
+                    
+                    <button id="btnSignUp" class="form-control btn btn-secondary">
+                        Sign Up
+                    </button>
+    
+                    <button id="btnLogout" class="form-control btn btn-action" hidden>
+                        Log out
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" id="ib_m" onclick="setMenuPrincipal('ib_m');" href="#">IB</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="oanda_m" onclick="setMenuPrincipal('oanda_m');" href="#">Oanda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="poloniex_m" onclick="setMenuPrincipal('poloniex_m');" href="#">Poloniex</a>
+                </li>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>-->
+            </ul>
+        </div>
+        <div class="card-body" id="bodyId" hidden>
+            <!-- Interactive brokers -->
+            <div id="ib" hidden>
+                <h1>Interactive brokers</h1>
+
+                <div id="graph1"></div>
+                
+                <div id="graph2"></div>
+                
+            
+                <h1 id="theID">
+                    dato ...
+                </h1>
+
+                <div id="form1">
+                    form ...
+                </div>
+
+                <div id="tabla1">
+                    table ...
+                </div>
+
+            </div>
+            <!-- Oanda -->
+            <div id="oanda" hidden>
+                <h1>Oanda</h1>
+
+            </div>
+            <!-- Poloniex -->
+            <div id="poloniex" hidden>
+                <h1>Poloniex</h1>
+
+            </div>
+
+            <!--
+
+        
+            <div hidden>
+                <div id="graph"></div>
+                <h1 id="hola">65465</h1>
+                Hola
+            </div>-->
+                
+        </div>
+    </div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <script src="loadFirebase.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
